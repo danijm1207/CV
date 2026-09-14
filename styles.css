@@ -34,6 +34,25 @@
 }
 
 /* =========================================================
+   Modo Oscuro (Dark Mode)
+   ========================================================= */
+body.dark-mode {
+  --color-primary: #52B2B2;
+  --color-primary-dark: #80CBC4;
+  --color-accent: #FFA726;
+  --color-bg: #12181B;
+  --color-surface: #1E262B;
+  --color-text: #E2E8F0;
+  --color-text-light: #94A3B8;
+  --color-border: #2D3748;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================================
    Reset básico
    ========================================================= */
 * {
@@ -107,6 +126,26 @@ p {
 
 .navbar__links a:hover,
 .navbar__links a:focus-visible {
+  color: var(--color-primary);
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-border);
   color: var(--color-primary);
 }
 

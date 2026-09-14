@@ -207,7 +207,50 @@ function inicializarFormulario() {
   });
 }
  
+/* =========================================================
+   PASO 5: Modo Oscuro (Dark Mode)
+   Manejo de preferencia del usuario y persistencia en localStorage
+   ========================================================= */
+
+function actualizarBotonTema(esOscuro) {
+  const btnToggle = document.getElementById("theme-toggle");
+  if (!btnToggle) return;
+
+  if (esOscuro) {
+    btnToggle.innerHTML = `☀️ <span>Modo claro</span>`;
+    btnToggle.setAttribute("aria-label", "Cambiar a modo claro");
+  } else {
+    btnToggle.innerHTML = `🌙 <span>Modo oscuro</span>`;
+    btnToggle.setAttribute("aria-label", "Cambiar a modo oscuro");
+  }
+}
+
+function inicializarModoOscuro() {
+  const btnToggle = document.getElementById("theme-toggle");
+  if (!btnToggle) return;
+
+  const temaGuardado = localStorage.getItem("tema");
+  const prefiereOscuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const esModoOscuro = temaGuardado === "dark" || (!temaGuardado && prefiereOscuro);
+
+  if (esModoOscuro) {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+
+  actualizarBotonTema(esModoOscuro);
+
+  btnToggle.addEventListener("click", () => {
+    const estaEnOscuro = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("tema", estaEnOscuro ? "dark" : "light");
+    actualizarBotonTema(estaEnOscuro);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   poblarSelectMaterias();
   inicializarFormulario();
+  inicializarModoOscuro();
 });
