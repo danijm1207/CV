@@ -10,17 +10,18 @@ La idea del proyecto nace de la necesidad de encontrar profesores particulares d
 
 Puedes visitar la página desplegada en Vercel aquí:
 
-**[Ver NIDO en Vercel](PEGAR_AQUÍ_EL_LINK_DE_VERCEL)**
+**[Ver NIDO en Vercel](https://cv-git-landing-nido-dm6932010-1389s-projects.vercel.app/)**
 
 ## 3. Capturas del proyecto
 
 ### Versión de escritorio
+<img width="1896" height="853" alt="Nidocatalogo" src="https://github.com/user-attachments/assets/168cc4f5-bcf7-45c2-9090-a7ab95cea9f0" />
 
-![NIDO en escritorio](./capturas/nido-escritorio.png)
 
 ### Versión móvil
 
-![NIDO en móvil](./capturas/nido-movil.png)
+<img width="738" height="1600" alt="WhatsApp Image 2026-09-14 at 12 07 04 AM" src="https://github.com/user-attachments/assets/fde9c593-73d7-442e-bb93-eec93d081c93" />
+
 
 ## 4. Estructura del proyecto
 
@@ -55,13 +56,14 @@ Para controlar el envío utilizo `preventDefault()`, evitando que el navegador r
 
 ### Uso de inteligencia artificial
 
-Durante el desarrollo utilicé herramientas de inteligencia artificial como apoyo para resolver dudas, obtener ideas y entender algunas partes de HTML, CSS y JavaScript.
+Durante el desarrollo utilicé herramientas de inteligencia artificial como apoyo para resolver dudas, obtener ideas, hacer "codigo limpio" para mantener el proyecto más organizado y legible y entender algunas partes de HTML, CSS y JavaScript.
 
 Sin embargo, el resultado no se utilizó directamente sin modificaciones. Revisé y adapté las propuestas de acuerdo con los requisitos del proyecto, cambiando elementos del diseño, estructura y funcionamiento para construir la versión final de NIDO y comprender cómo funcionaba el código utilizado.
 
 ### Dificultades encontradas
 
-Una de las partes más difíciles fue organizar el catálogo de profesores y lograr que se mostrara correctamente sin tener que escribir cada tarjeta directamente en el HTML. Para solucionarlo, utilicé arreglos de objetos en JavaScript y aprendí a recorrer esos datos para generar los elementos de la página dinámicamente.
+Una de las partes más difíciles fue organizar el catálogo de profesores y lograr que se mostrara correctamente sin tener que escribir cada tarjeta directamente en el HTML, dado a que para ser sincero, creo que falte a esas clases o 
+no preste atención, porque no tenia ni idea de como hacerlo. Para solucionarlo, utilicé arreglos de objetos en JavaScript y con ayuda igualmente de la IA, aprendí a recorrer esos datos para generar los elementos de la página dinámicamente.
 
 También fue necesario trabajar en la adaptación del diseño para diferentes tamaños de pantalla. Para solucionarlo utilicé CSS responsive, Flexbox y Grid, haciendo que los elementos se reorganizaran dependiendo del espacio disponible.
 
