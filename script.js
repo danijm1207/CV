@@ -54,7 +54,7 @@ const materias = [
         nombreMateria: "Comprensión lectora",
         descripcion: "Estrategias de lectura crítica y redacción para mejorar el rendimiento escolar.",
         precio: 30000,
-        foto: "assets/materias/lenguaje.jpg",
+        foto: "assets/materias/lectura.jpg",
         profesorId: 2
     },
     {
@@ -62,7 +62,7 @@ const materias = [
         nombreMateria: "Ciencias Naturales",
         descripcion: "Biología y ecología con experimentos sencillos aptos para casa.",
         precio: 32000,
-        foto: "assets/materias/ciencias.jpg",
+        foto: "assets/materias/cienciasnaturales.jpg",
         profesorId: 3
     }
 ];
