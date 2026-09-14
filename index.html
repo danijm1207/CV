@@ -9,7 +9,7 @@
 <body>
 
   <header class="site-header">
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
       <div class="navbar__brand">NIDO</div>
       <ul class="navbar__links">
         <li><a href="#catalogo">Catálogo</a></li>
@@ -62,29 +62,29 @@
 
         <div class="campo">
           <label for="nombre">Nombre del estudiante</label>
-          <input type="text" id="nombre" name="nombre" required minlength="3">
-          <span class="error-mensaje" id="error-nombre"></span>
+          <input type="text" id="nombre" name="nombre" required minlength="3" aria-describedby="error-nombre">
+          <span class="error-mensaje" id="error-nombre" aria-live="polite"></span>
         </div>
 
         <div class="campo">
           <label for="correo">Correo del acudiente</label>
-          <input type="email" id="correo" name="correo" required>
-          <span class="error-mensaje" id="error-correo"></span>
+          <input type="email" id="correo" name="correo" required aria-describedby="error-correo">
+          <span class="error-mensaje" id="error-correo" aria-live="polite"></span>
         </div>
 
         <div class="campo">
           <label for="telefono">Teléfono de contacto</label>
-          <input type="tel" id="telefono" name="telefono" required>
-          <span class="error-mensaje" id="error-telefono"></span>
+          <input type="tel" id="telefono" name="telefono" required aria-describedby="error-telefono">
+          <span class="error-mensaje" id="error-telefono" aria-live="polite"></span>
         </div>
 
         <div class="campo">
           <label for="materiaInteres">Materia de interés</label>
-          <select id="materiaInteres" name="materiaInteres" required>
+          <select id="materiaInteres" name="materiaInteres" required aria-describedby="error-materiaInteres">
             <option value="">Selecciona una materia</option>
             <!-- Las opciones se generan dinámicamente desde script.js -->
           </select>
-          <span class="error-mensaje" id="error-materiaInteres"></span>
+          <span class="error-mensaje" id="error-materiaInteres" aria-live="polite"></span>
         </div>
 
         <div class="campo">
@@ -94,7 +94,7 @@
 
         <button type="submit">Enviar inscripción</button>
 
-        <p id="mensaje-exito" class="mensaje-exito" hidden>
+        <p id="mensaje-exito" class="mensaje-exito" aria-live="polite" hidden>
           ¡Gracias! Hemos recibido tu inscripción y te contactaremos pronto.
         </p>
       </form>
