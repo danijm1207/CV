@@ -66,4 +66,49 @@ const materias = [
         profesorId: 3
     }
 ];
-    
+
+
+/*
+catalogo dinamico: generamos las tarjetas de materias a partir del arreglo
+"materias", relacionandolas con su profesor en "profesores"
+*/
+
+function crearTarjetaMateria(materia) {
+  // Relación entre las dos entidades: buscamos el profesor
+  // cuyo id coincide con el profesorId de esta materia.
+  const profesor = profesores.find((p) => p.id === materia.profesorId);
+  const nombreProfesor = profesor ? profesor.nombre : "Por asignar";
+ 
+  const precioFormateado = materia.precio.toLocaleString("es-CO", {
+    style: "currency",
+    currency: "COP",
+    maximumFractionDigits: 0
+  });
+ 
+  return `
+    <article class="tarjeta-materia">
+      <img src="${materia.foto}" alt="${materia.nombreMateria}">
+      <div class="tarjeta-materia__body">
+        <h3>${materia.nombreMateria}</h3>
+        <p>${materia.descripcion}</p>
+        <p class="tarjeta-materia__profesor">Tutor: ${nombreProfesor}</p>
+        <p class="tarjeta-materia__precio">${precioFormateado} / hora</p>
+      </div>
+    </article>
+  `;
+}
+ 
+function renderCatalogo() {
+  const contenedor = document.getElementById("catalogo-container");
+ 
+  if (!contenedor) return;
+ 
+  // .map() transforma cada objeto materia en su HTML correspondiente
+  // y .join("") une todos los strings en uno solo.
+  const tarjetasHTML = materias.map(crearTarjetaMateria).join("");
+ 
+  contenedor.innerHTML = tarjetasHTML;
+}
+ 
+// Esperamos a que el DOM esté completamente cargado antes de pintar
+document.addEventListener("DOMContentLoaded", renderCatalogo);
