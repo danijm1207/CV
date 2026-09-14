@@ -3,14 +3,14 @@
    ========================================================= */
 :root {
   /* Colores */
-    --color-primary: #2A6F6F;
-    --color-primary-dark: #1B4B4B;
-    --color-accent: #F5A623;
-    --color-bg: #F7F7F2;
-    --color-surface: #FFFFFF;
-    --color-text: #1F2A2E;
-    --color-text-light: #566264;
-    --color-border: #D8E3E0;
+  --color-primary: #2A6F6F;
+  --color-primary-dark: #1B4B4B;
+  --color-accent: #F5A623;
+  --color-bg: #F7F7F2;
+  --color-surface: #FFFFFF;
+  --color-text: #1F2A2E;
+  --color-text-light: #566264;
+  --color-border: #D8E3E0;
 
   /* Tipografía */
   --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -185,6 +185,67 @@ p {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+/* =========================================================
+   Formulario de inscripción
+   ========================================================= */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-sm);
+  max-width: 480px;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font-base);
+  font-size: 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.error-mensaje {
+  color: #C0392B;
+  font-size: 0.85rem;
+  min-height: 1.1rem;
+}
+
+#form-inscripcion button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#form-inscripcion button[type="submit"]:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.mensaje-exito {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  margin-top: var(--space-sm);
 }
 
 /* =========================================================
