@@ -3,14 +3,14 @@
    ========================================================= */
 :root {
   /* Colores */
-  --color-primary: #2A6F6F;
-  --color-primary-dark: #1B4B4B;
-  --color-accent: #F5A623;
-  --color-bg: #F7F7F2;
-  --color-surface: #FFFFFF;
-  --color-text: #1F2A2E;
-  --color-text-light: #566264;
-  --color-border: #D8E3E0;
+    --color-primary: #2A6F6F;
+    --color-primary-dark: #1B4B4B;
+    --color-accent: #F5A623;
+    --color-bg: #F7F7F2;
+    --color-surface: #FFFFFF;
+    --color-text: #1F2A2E;
+    --color-text-light: #566264;
+    --color-border: #D8E3E0;
 
   /* Tipografía */
   --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;

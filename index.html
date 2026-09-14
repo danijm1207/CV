@@ -1,54 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIDO | Clases particulares</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIDO | Clases particulares</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <nav class="navbar">
-        <div class="navbar__brand">NIDO</div>
-        <ul class="navbar__links">
-            <li><a href="#catalogo">Catálogo</a></li>
-            <li><a href="#profesores">Profesores</a></li>
-            <li><a href="#contacto">Inscripción</a></li>
-        </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar__brand">NIDO</div>
+      <ul class="navbar__links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#profesores">Profesores</a></li>
+        <li><a href="#contacto">Inscripción</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
+  <main>
 
     <!-- Sección de bienvenida -->
     <section class="hero" id="inicio">
-        <h1>Clases particulares para niños de colegio, virtuales y presenciales</h1>
-        <p>Conectamos a tu hijo o hija con tutores especializados en las materias donde más lo necesita.</p>
+      <h1>Clases particulares para niños de colegio, virtuales y presenciales</h1>
+      <p>Conectamos a tu hijo o hija con tutores especializados en las materias donde más lo necesita.</p>
     </section>
 
     <!-- Catálogo dinámico: se llenará con JS en el Paso 3 -->
     <section class="catalogo" id="catalogo">
-        <h2>Nuestras materias</h2>
-        <div class="catalogo__grid" id="catalogo-container">
+      <h2>Nuestras materias</h2>
+      <div class="catalogo__grid" id="catalogo-container">
         <!-- Las tarjetas de materias se insertarán aquí dinámicamente -->
-        </div>
+      </div>
     </section>
 
     <!-- Sección reservada para el formulario del Paso 4 -->
     <section class="contacto" id="contacto">
-        <h2>Inscríbete a una clase</h2>
-        <form id="form-inscripcion">
-        <!-- El formulario completo se construye en el Paso 4 -->
-        </form>
+      <h2>Inscríbete a una clase</h2>
+      <form id="form-inscripcion" novalidate>
+
+        <div class="campo">
+          <label for="nombre">Nombre del estudiante</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3">
+          <span class="error-mensaje" id="error-nombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo del acudiente</label>
+          <input type="email" id="correo" name="correo" required>
+          <span class="error-mensaje" id="error-correo"></span>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono de contacto</label>
+          <input type="tel" id="telefono" name="telefono" required>
+          <span class="error-mensaje" id="error-telefono"></span>
+        </div>
+
+        <div class="campo">
+          <label for="materiaInteres">Materia de interés</label>
+          <select id="materiaInteres" name="materiaInteres" required>
+            <option value="">Selecciona una materia</option>
+            <!-- Las opciones se generan dinámicamente desde script.js -->
+          </select>
+          <span class="error-mensaje" id="error-materiaInteres"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Enviar inscripción</button>
+
+        <p id="mensaje-exito" class="mensaje-exito" hidden>
+          ¡Gracias! Hemos recibido tu inscripción y te contactaremos pronto.
+        </p>
+      </form>
     </section>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <p>&copy; 2026 TutorKids. Proyecto académico - Desarrollo Web.</p>
-    </footer>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
