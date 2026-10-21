@@ -1,0 +1,57 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. Tabla de usuarios con roles y credenciales seguras
+model User {
+  id            Int           @id @default(autoincrement())
+  nombre        String
+  email         String        @unique
+  password      String
+  role          String        @default("user") // "admin" | "user"
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  inscripciones Inscripcion[]
+
+  @@map("users")
+}
+
+// 2. Tabla del catálogo de la Entrega 1: Materias / Tutorías NIDO
+model Materia {
+  id            Int           @id @default(autoincrement())
+  nombreMateria String
+  descripcion   String
+  precio        Float
+  foto          String
+  tutor         String
+  categoria     String        @default("General")
+  modalidad     String        @default("Virtual y Presencial")
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  inscripciones Inscripcion[]
+
+  @@map("materias")
+}
+
+// 3. Tabla de interacción: Inscripción a clase relacionando User y Materia
+model Inscripcion {
+  id               Int      @id @default(autoincrement())
+  nombreEstudiante String
+  correoAcudiente  String
+  telefono         String
+  mensaje          String?
+  estado           String   @default("PENDIENTE") // "PENDIENTE" | "CONFIRMADA" | "COMPLETADA" | "CANCELADA"
+  userId           Int
+  materiaId        Int
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  materia          Materia  @relation(fields: [materiaId], references: [id], onDelete: Cascade)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("inscripciones")
+}
