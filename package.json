@@ -1,0 +1,15 @@
+{
+  "name": "nido-fullstack",
+  "version": "1.0.0",
+  "description": "NIDO — Plataforma de clases particulares Full-Stack (Next.js + Express + TypeScript + Prisma + PostgreSQL + JWT)",
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:backend": "npm --prefix backend run build",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "npm --prefix backend test",
+    "seed:backend": "npm --prefix backend run prisma:seed"
+  },
+  "author": "Daniel Morales",
+  "license": "ISC"
+}
