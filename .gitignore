@@ -35,3 +35,4 @@ backend/uploads/*
 # Sistema operativo
 .DS_Store
 Thumbs.db
+*.tsbuildinfo
