@@ -6,9 +6,9 @@ Aplicación frontend moderna desarrollada en **Next.js (App Router)**, **TypeScr
 
 ## 1. Enlaces de Despliegue
 
-- **Sitio Web (Frontend desplegado en Vercel):** [https://cv-danijm1207.vercel.app](https://cv-danijm1207.vercel.app)
+- **Sitio Web (Frontend desplegado en Vercel):** [https://nido-frontendd.vercel.app/](https://nido-frontendd.vercel.app/)
 - **API REST (Backend desplegado en Render):** [https://nido-backend-p62h.onrender.com](https://nido-backend-p62h.onrender.com)
-- **Repositorio Frontend en GitHub:** [https://github.com/danijm1207/CV](https://github.com/danijm1207/CV)
+- **Repositorio Frontend en GitHub:** [https://github.com/danijm1207/nido-frontendd.git](https://github.com/danijm1207/nido-frontendd.git)
 - **Repositorio Backend en GitHub:** [https://github.com/danijm1207/nido-backend](https://github.com/danijm1207/nido-backend)
 
 ---
