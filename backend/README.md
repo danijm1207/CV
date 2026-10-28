@@ -6,10 +6,10 @@ API REST desarrollada en Node.js, Express, TypeScript, Prisma ORM y PostgreSQL p
 
 ## 1. Enlaces de Despliegue
 
-- **API REST (Backend):** [https://nido-api.onrender.com](https://nido-api.onrender.com) (o tu URL en Render / Railway)
-- **Sitio Web (Frontend en Vercel):** [https://cv-danijm1207.vercel.app](https://cv-danijm1207.vercel.app)
-- **Repositorio Backend:** [https://github.com/danijm1207/CV/tree/main/backend](https://github.com/danijm1207/CV)
-- **Repositorio Frontend:** [https://github.com/danijm1207/CV/tree/main/frontend](https://github.com/danijm1207/CV)
+- **API REST (Backend desplegado en Render):** [https://nido-backend-p62h.onrender.com](https://nido-backend-p62h.onrender.com)
+- **Sitio Web (Frontend desplegado en Vercel):** [https://cv-danijm1207.vercel.app](https://cv-danijm1207.vercel.app)
+- **Repositorio Backend en GitHub:** [https://github.com/danijm1207/nido-backend](https://github.com/danijm1207/nido-backend)
+- **Repositorio Frontend en GitHub:** [https://github.com/danijm1207/CV](https://github.com/danijm1207/CV)
 
 ---
 
